@@ -41,7 +41,7 @@ describe('App', () => {
 
   describe("watch", () => {
     describe("cart", () => {
-      fit('Deve desabilitar item caso encontrado no carrinho', () => {
+      it('Deve desabilitar item caso encontrado no carrinho', () => {
         let item = { id: 1, name: "iPhone 7", price: 4000, active: true }
         
         wrapper.setData({
