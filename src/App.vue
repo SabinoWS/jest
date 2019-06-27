@@ -11,7 +11,9 @@
       </li>
     </ul>
 
-    <items-list></items-list>
+    CARRINHO
+    {{cart}}
+
   </div>
 </template>
 
@@ -26,7 +28,7 @@ export default {
     return {
       items: [
         { id: 1, name: "iPhone 7", price: 4000, active: true },
-        { id: 2, name: "iPhone 8", price: 5500, active: false },
+        { id: 2, name: "iPhone 8", price: 5500, active: true },
         { id: 3, name: "iPhone X", price: 6000, active: true }
       ],
       cart: []
@@ -42,7 +44,9 @@ export default {
     cart(newCart, oldCart) {
       newCart.forEach(cartItem => {
         let itemFound = this.items.find(item => item.id === cartItem.id);
-        if (Boolean(itemFound)) itemFound.active = false;
+        if (Boolean(itemFound)) {
+          itemFound.active = false;
+        } 
       });
     }
   },
