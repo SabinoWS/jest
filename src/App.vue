@@ -12,7 +12,11 @@
     </ul>
 
     CARRINHO
-    {{cart}}
+    <ul>
+      <li v-for="product in cart">
+        {{ product }}
+      </li>
+    </ul>
 
   </div>
 </template>
